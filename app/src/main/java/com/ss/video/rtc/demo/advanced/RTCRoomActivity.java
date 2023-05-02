@@ -667,9 +667,8 @@ public class RTCRoomActivity extends AppCompatActivity implements ConfigManger.C
                     Log.i("TAG", "Something here: ");
                     Bitmap bt = Bitmap.createBitmap(videoFrame.getWidth(), videoFrame.getHeight(), Bitmap.Config.ARGB_8888);
                     bt.copyPixelsFromBuffer(buffer);
-                   // ImageView imageView = findViewById(R.id.iv_image);
-
-                    //imageView.setImageBitmap(bt);
+                    ImageView imageView = findViewById(R.id.iv_image);
+                    imageView.setImageBitmap(bt);
                     Log.i("TAG", "processVideoFrame: " + bt);
                     return videoFrame;
                 }
